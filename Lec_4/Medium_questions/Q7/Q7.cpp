@@ -8,13 +8,14 @@ int main() {
     
     //top part
     for(int i = 0; i < n; i++) {
+
         //spaces 
-        for (int j = 1; j <= n-1-i; j++) {
+        for (int j = 1; j <= n - 1 - i; j++) {
             cout << " ";
         }
 
         //stars
-        for(int k = 0; k < ( 2*i + 1); k++) {
+        for(int k = 0; k < ( 2 * i + 1 ); k++) {
             cout << "*";
         }
 
@@ -23,17 +24,21 @@ int main() {
 
 
     //bottom part
-    for (int i=0; i < n-1; i++) {
-        //spaces
-        for (int j=0; j <= i; j++) {
+    for (int i = n - 2; i >= 0; i--) {
+
+        // Spaces
+        for (int j = 0; j < n - i - 1; j++) {
             cout << " ";
         }
 
-        // stars
-        for (int k = 2 * i+1; k >= n+1;){
+        // Stars
+        for (int k = 0; k < 2 * i + 1; k++) {
             cout << "*";
         }
+
         cout << endl;
     }
+
+    
     return 0;
 }
